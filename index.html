@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mr. Chrono · Catalogue</title>
+<meta name="description" content="G-Shock, Royal Pop et Whoop. Choisis ton modèle et commande sur WhatsApp ou Snapchat. Remise en main propre sur Bruxelles.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mr. Chrono">
+<meta property="og:title" content="Mr. Chrono · Catalogue">
+<meta property="og:description" content="G-Shock, Royal Pop et Whoop · Remise en main propre sur Bruxelles">
+<meta property="og:url" content="https://mrchrono-bxl.github.io/">
+<meta property="og:image" content="https://mrchrono-bxl.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mrchrono-bxl.github.io/og.jpg">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#ecebe7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#ecebe7;--card:#ffffff;--card2:#f6f3ec;--line:rgba(168,135,63,.35);--line2:rgba(0,0,0,.09);--txt:#151515;--mute:#7a746a;--gold:#a8873f;--gold2:#8c6e2e;--wa:#25d366;--snap:#fffc00;--red:#ff5a5a;--serif:'Cormorant Garamond',Georgia,serif;--sans:Manrope,system-ui,sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  body{padding-bottom:calc(100px + env(safe-area-inset-bottom));background:var(--bg)}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+  header{position:sticky;top:0;z-index:10;background:rgba(236,235,231,.9);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:calc(16px + env(safe-area-inset-top)) 16px 0;border-bottom:1px solid var(--line)}
+  .brand{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+  .logo{font-family:var(--serif);font-weight:600;font-size:30px;letter-spacing:.22em;line-height:1;padding-left:.22em}
+  .logo span{color:var(--gold)}
+  .loc{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute)}
+  .loc:before,.loc:after{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+  .loc:after{transform:scaleX(-1)}
+  .loc i{display:none}
+  nav{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 14px;padding:12px 0 0}
+  nav a{position:relative;padding:8px 1px 12px;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);transition:color .2s}
+  nav a:after{content:"";position:absolute;left:50%;bottom:-1px;width:0;height:2px;background:var(--gold);transition:.25s;transform:translateX(-50%)}
+  nav a.on{color:var(--gold2)}
+  nav a.on:after{width:100%}
+  main{max-width:1080px;margin:0 auto}
+  .welcome{margin:22px 16px 0;padding:38px 22px 34px;text-align:center;position:relative;border:1px solid var(--line);background:rgba(255,255,255,.72);backdrop-filter:blur(2px)}
+  .welcome:before{content:"";position:absolute;inset:6px;border:1px solid rgba(168,135,63,.18);pointer-events:none}
+  .welcome .hi{font-size:10px;font-weight:600;letter-spacing:.38em;text-transform:uppercase;color:var(--gold)}
+  .welcome h1{font-family:var(--serif);font-weight:500;font-size:clamp(36px,10vw,60px);line-height:1;letter-spacing:-.01em;margin-top:16px}
+  .welcome h1 em{font-style:italic;color:var(--gold2)}
+  .orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px auto 0;color:var(--gold)}
+  .orn:before,.orn:after{content:"";width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+  .orn:after{transform:scaleX(-1)}
+  .orn b{width:6px;height:6px;transform:rotate(45deg);border:1px solid var(--gold)}
+  .welcome p{color:#55504a;margin:18px auto 0;font-size:14.5px;line-height:1.65;max-width:440px}
+  .welcome p b{color:var(--txt);font-weight:600}
+  .perks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:20px}
+  .perks span{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+  .welcome .cta{display:inline-flex;margin-top:26px;padding:15px 28px;border:1px solid var(--txt);background:var(--txt);color:#fff;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;transition:.2s}
+  .welcome .cta:hover{background:var(--txt);color:#fff;border-color:var(--txt)}
+  section{padding:40px 16px 4px}
+  .sh{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:20px}
+  .sh:before{content:attr(data-eyebrow);font-size:10px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .sh h2{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.05;letter-spacing:.01em}
+  .sh small{color:var(--mute);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:10px}
+  .sh:after{content:"";width:40px;height:1px;background:var(--gold);margin-top:14px}
+  .sub{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:-4px 0 20px}
+  .sub button{padding:8px 14px;border:1px solid var(--line2);color:var(--mute);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:.2s}
+  .sub button.on{border-color:var(--txt);color:#fff;background:var(--txt)}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line2);display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+  .card:hover{border-color:var(--line);transform:translateY(-2px);box-shadow:0 14px 30px -18px rgba(0,0,0,.25)}
+  .vis{aspect-ratio:1/1;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 40%,var(--glow,#2a2a31) 0%,var(--card2) 70%);overflow:hidden}
+  .vis.ph{background:#fff}
+  .vis svg{width:72%;height:72%;filter:drop-shadow(0 10px 18px rgba(0,0,0,.5))}
+  .vis img{width:100%;height:100%;object-fit:contain;padding:7%;transition:transform .4s}
+  .card:hover .vis img{transform:scale(1.04)}
+  .tags{position:absolute;top:8px;left:8px;right:8px;display:flex;flex-wrap:wrap;gap:4px;z-index:2}
+  .tag{font-size:8.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 7px;background:#151515;color:#fff}
+  .tag.bs{background:var(--gold);color:#fff}
+  .tag.ok{display:none}
+  .tag.out{background:#e9e6df;color:#6d675e}
+  .card.sold .vis img,.card.sold .vis svg{opacity:.4;filter:grayscale(1)}
+  .info{padding:14px 12px 14px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;flex:1}
+  .name{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1.45;color:var(--txt)}
+  .price{font-family:var(--serif);font-weight:600;font-size:23px;color:var(--gold2);margin-top:2px}
+  .price.ask{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .add{margin-top:auto;padding-top:12px;width:100%}
+  .add button,.add a{width:100%;display:flex;align-items:center;justify-content:center;gap:7px;padding:11px 6px;border:1px solid var(--txt);color:var(--txt);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;transition:.2s}
+  .add button:hover{background:var(--txt);color:#fff}
+  .add a.notify{border-color:var(--line2);color:var(--mute)}
+  .stepper{display:flex;align-items:center;justify-content:space-between;background:var(--txt);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .stepper button{padding:9px 14px;font-size:17px;line-height:1;color:#fff;font-weight:700;width:auto;border:0;background:none}
+  .top5{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 16px 8px;margin:0 -16px;scrollbar-width:none}
+  .top5::-webkit-scrollbar{display:none}
+  .top5 .card{flex:none;width:64%;max-width:250px;scroll-snap-align:center;position:relative}
+  .rank{position:absolute;bottom:4px;left:10px;z-index:2;font-family:var(--serif);font-style:italic;font-weight:600;font-size:54px;line-height:1;color:transparent;-webkit-text-stroke:1.2px var(--gold)}
+  .vis.ph,.cb .im,.ln .th{background:#fff}
+  .catbest{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .cb{background:var(--card);border:1px solid var(--line2);display:flex;flex-direction:column;text-align:center;transition:border-color .2s}
+  .cb:hover{border-color:var(--line)}
+  .cb .im{aspect-ratio:1/1;background:#fff;display:grid;place-items:center}
+  .cb .im img{width:100%;height:100%;object-fit:contain;padding:8%}
+  .cb .im svg{width:70%;height:70%}
+  .cb .lb{padding:10px 6px 12px}
+  .cb .lb small{display:block;font-size:8.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .cb .lb div{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1.35;margin-top:5px;color:var(--txt)}
+  .cb .lb b{display:block;font-family:var(--serif);font-weight:600;font-size:18px;color:var(--gold2);margin-top:4px}
+  footer{padding:48px 18px 14px;text-align:center;color:var(--mute);font-size:11px;letter-spacing:.06em;line-height:1.9}
+  footer:before{content:"MR. CHRONO";display:block;font-family:var(--serif);font-size:20px;letter-spacing:.3em;color:var(--gold);margin-bottom:8px}
+  footer b{color:var(--txt);font-weight:600}
+  .dock{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:10px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(236,235,231,1) 55%,rgba(236,235,231,0))}
+  @media(min-width:720px){.dock{max-width:560px;margin:0 auto}}
+  .dock a,.dock button{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+  .dock .w{background:#fff;border:1px solid var(--txt);color:var(--txt);flex:.75}
+  .dock .c{background:var(--txt);color:#fff;flex:1.25}
+  .dock .c b{background:var(--gold);color:#fff;border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:11px;letter-spacing:0;padding:0 6px}
+  .dock .c.has{background:linear-gradient(135deg,#c9a961,#a8873f)}
+  .dock svg{width:17px;height:17px}
+  .sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;opacity:0;pointer-events:none;transition:.2s}
+  .sheet{position:fixed;left:0;right:0;bottom:0;z-index:31;background:#fff;border-top:2px solid var(--gold);max-height:88vh;display:flex;flex-direction:column;transform:translateY(105%);transition:transform .28s ease;padding-bottom:env(safe-area-inset-bottom)}
+  .open .sheet-bg{opacity:1;pointer-events:auto}
+  .open .sheet{transform:none}
+  @media(min-width:720px){.sheet{max-width:520px;margin:0 auto}}
+  .sh-head{display:flex;justify-content:space-between;align-items:center;padding:18px 18px 10px}
+  .sh-head h3{font-family:var(--serif);font-weight:500;font-size:26px}
+  .x{width:36px;height:36px;border:1px solid var(--line);color:var(--gold2);font-size:15px}
+  .lines{overflow-y:auto;padding:4px 18px;flex:1}
+  .ln{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line2)}
+  .ln .th{width:54px;height:54px;overflow:hidden;flex:none;background:#fff;display:grid;place-items:center}
+  .ln .th img{width:100%;height:100%;object-fit:contain;padding:4px}
+  .ln .th svg{width:80%;height:80%}
+  .ln .t{flex:1;min-width:0}
+  .ln .t div:first-child{font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .ln .t div:last-child{color:var(--gold);font-size:12px;margin-top:3px}
+  .mini{display:flex;align-items:center;gap:2px;border:1px solid var(--line)}
+  .mini button{width:32px;height:32px;font-size:16px;font-weight:600;color:var(--gold2)}
+  .mini span{min-width:18px;text-align:center;font-weight:700;font-size:13px}
+  .empty{color:var(--mute);text-align:center;padding:34px 10px;font-size:13px;line-height:1.6}
+  .foot{padding:14px 18px 16px;border-top:1px solid var(--line)}
+  .tot{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+  .tot span{color:var(--mute);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+  .tot b{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--gold2)}
+  .note{color:var(--mute);font-size:11.5px;line-height:1.5;margin-bottom:12px}
+  .foot input{width:100%;padding:13px 14px;border:1px solid var(--line2);background:#faf9f6;color:var(--txt);font:inherit;font-size:14px;margin-bottom:10px;border-radius:0}
+  .foot input:focus{outline:none;border-color:var(--gold)}
+  .order{display:flex;gap:10px}
+  .order a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 8px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .order .ow{background:var(--wa);color:#04210f}
+  .order .os{background:var(--snap);color:#000}
+  .order.off{opacity:.35;pointer-events:none}
+  .toast{position:fixed;left:50%;bottom:calc(110px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);background:var(--txt);color:#fff;padding:12px 16px;font-size:12.5px;font-weight:600;z-index:40;opacity:0;transition:.25s;pointer-events:none;max-width:90vw;text-align:center}
+  .toast.on{opacity:1;transform:translateX(-50%)}
+  body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cg%20fill%3D%22%23151515%22%3E%3Cpolygon%20points%3D%22108%2C165%20140%2C165%20171%2C226%20202%2C165%20234%2C165%20234%2C348%20206%2C348%20206%2C232%20171%2C296%20136%2C232%20136%2C348%20108%2C348%22/%3E%3Cpolygon%20points%3D%22300%2C165%20405%2C165%20405%2C193%20312%2C193%20298%2C207%20298%2C304%20314%2C320%20405%2C320%20405%2C348%20300%2C348%20270%2C318%20270%2C195%22/%3E%3C/g%3E%3Crect%20x%3D%22337%22%20y%3D%22238%22%20width%3D%2235%22%20height%3D%2235%22%20fill%3D%22%23e8462a%22/%3E%3C/svg%3E") center 58%/min(120vw,760px) no-repeat;opacity:.07}
+  .logo-mark{width:30px;height:30px;display:block;margin:0 auto 4px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cg%20fill%3D%22%23151515%22%3E%3Cpolygon%20points%3D%22108%2C165%20140%2C165%20171%2C226%20202%2C165%20234%2C165%20234%2C348%20206%2C348%20206%2C232%20171%2C296%20136%2C232%20136%2C348%20108%2C348%22/%3E%3Cpolygon%20points%3D%22300%2C165%20405%2C165%20405%2C193%20312%2C193%20298%2C207%20298%2C304%20314%2C320%20405%2C320%20405%2C348%20300%2C348%20270%2C318%20270%2C195%22/%3E%3C/g%3E%3Crect%20x%3D%22337%22%20y%3D%22238%22%20width%3D%2235%22%20height%3D%2235%22%20fill%3D%22%23e8462a%22/%3E%3C/svg%3E") center/contain no-repeat;background-color:#151515;border-radius:4px}
+  .dock{flex-direction:column;gap:10px}
+  .dockb{display:flex;gap:10px}
+  .dock nav{flex-wrap:nowrap;justify-content:space-evenly;overflow-x:auto;scrollbar-width:none;gap:2px 10px;background:rgba(255,255,255,.96);border:1px solid var(--line2);box-shadow:0 8px 24px -14px rgba(0,0,0,.25);padding:2px 10px}
+  .dock nav a{flex:none;padding:11px 1px 12px;display:inline-block;font-size:10px;letter-spacing:.1em}
+  body{background:transparent!important}
+  header{padding-bottom:14px}
+  body{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+
+  .cats{margin:36px 16px 0;flex-wrap:nowrap;justify-content:space-evenly;overflow-x:auto;scrollbar-width:none;gap:2px 10px;padding:4px 10px;background:#fff;border:1px solid var(--line2);box-shadow:0 10px 26px -18px rgba(0,0,0,.3)}
+  .sub button{background:#fff}
+  .cats a{flex:none;padding:13px 1px 14px;font-size:10px;letter-spacing:.1em}
+  .card,.cb{box-shadow:0 6px 20px -16px rgba(0,0,0,.35)}
+  #ssheet{max-height:94vh}
+  .sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:12px 0 6px}
+  @media(min-width:520px){.sgrid{gap:14px}}
+  .sc{border:1px solid var(--line2);background:#fff;display:flex;flex-direction:column;text-align:center;box-shadow:0 6px 20px -16px rgba(0,0,0,.35)}
+  .sc.in{border-color:var(--gold)}
+  .sc .im{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;overflow:hidden;position:relative;cursor:zoom-in}
+  .sc .im img{width:100%;height:100%;object-fit:contain;padding:3%}
+  .sc .im svg{width:82%;height:82%}
+  .sc .im .zi{position:absolute;right:6px;bottom:6px;width:26px;height:26px;border-radius:50%;background:rgba(21,21,21,.75);color:#fff;display:grid;place-items:center;font-size:13px}
+  .sc .nm{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1.35;padding:10px 6px 2px}
+  .sc .pr{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--gold2)}
+  .sc .ac{padding:8px 10px 10px;margin-top:auto}
+  .sc .ac>button{width:100%;padding:11px 6px;border:1px solid var(--txt);color:var(--txt);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .sc .ac .mini{justify-content:space-between;border-color:var(--txt)}
+  #zoom{position:fixed;inset:0;z-index:60;background:rgba(10,10,10,.9);display:none;flex-direction:column;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+  #zoom.on{display:flex}
+  #zoom .zb{background:#fff;width:min(92vw,560px);aspect-ratio:1/1;display:grid;place-items:center}
+  #zoom .zb img{width:100%;height:100%;object-fit:contain;padding:4%}
+  #zoom .zb svg{width:80%;height:80%}
+  #zoom p{color:#fff;margin-top:14px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+  #zoom small{color:rgba(255,255,255,.6);margin-top:6px;font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo">MR. <span>CHRONO</span></div><div class="loc">Horlogerie · Bruxelles</div></div>
+  
+</header>
+<main>
+  <div class="welcome">
+    <div class="hi">Bienvenue chez Mr. Chrono</div>
+    <h1>Ta prochaine montre<br>est <em>ici.</em></h1>
+    <div class="orn"><b></b></div>
+    <p>G-Shock, Royal Pop et Whoop, choisis tes modèles, ajoute-les au panier et envoie ta commande sur <b>WhatsApp</b> ou <b>Snapchat</b>. On te la remet en main propre sur Bruxelles.</p>
+    <div class="perks"><span>Remise en main propre</span><span>Stock à jour</span><span>Réponse rapide</span></div>
+    <a class="cta" href="#top">Découvrir les best-sellers</a>
+  </div>
+  <div id="highlights"></div>
+  <nav id="tabs" class="cats"></nav>
+  <div id="list"></div>
+  <footer>Mr. Chrono · Snapchat <b>mister-gshock</b> · WhatsApp <b>+32 451 01 86 95</b><br>Stock mis à jour le <span id="sync"></span></footer>
+</main>
+
+<div class="dock"><div class="dockb">
+  <a class="w" id="waMain" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Question</a>
+  <button class="c" id="cartBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>Panier <b id="cartN">0</b></button>
+</div></div>
+
+<div id="cartWrap">
+  <div class="sheet-bg" id="bg"></div>
+  <div class="sheet" role="dialog" aria-label="Panier">
+    <div class="sh-head"><h3>Ton panier</h3><button class="x" id="close">✕</button></div>
+    <div class="lines" id="lines"></div>
+    <div class="foot">
+      <div class="tot"><span>Total estimé</span><b id="tot">0 €</b></div>
+      <div class="note">Prix indicatif, à confirmer avec Mr. Chrono au moment de la remise.</div>
+      <input id="who" placeholder="Ton prénom ou pseudo Snap" autocomplete="given-name">
+      <input id="tel" placeholder="Ton numéro WhatsApp (ex. 0470 12 34 56)" inputmode="tel" autocomplete="tel">
+      <div class="order" id="order">
+        <a class="ow" id="sendWa" href="#">WhatsApp</a>
+        <a class="os" id="sendSnap" href="https://www.snapchat.com/add/mister-gshock">Snapchat</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<div id="zoom"><div class="zb" id="zimg"></div><p id="zname"></p><small>Touche pour fermer</small></div>
+<div class="sheet-bg" id="qbg" style="z-index:34"></div>
+<div class="sheet" id="qsheet" style="z-index:35" role="dialog" aria-label="Bracelet personnalisé">
+  <div class="sh-head"><h3>Bracelet personnalisé</h3><button class="x" id="qclose">✕</button></div>
+  <div style="padding:4px 18px 4px;font-size:15px;line-height:1.5"><p>As-tu déjà acheté une <b>Whoop chez Mr. Chrono</b> ?</p><p style="color:var(--mute);font-size:13px;margin-top:6px">Les clients Whoop Mr. Chrono ont un prix réduit sur les bracelets.</p></div>
+  <div class="foot" style="border:0"><div class="order"><a class="ow" href="#" data-client="oui" style="background:var(--txt);color:#fff">Oui</a><a class="ow" href="#" data-client="non" style="background:#fff;color:var(--txt);border:1px solid var(--txt)">Non</a></div></div>
+</div>
+<div class="sheet-bg" id="sbg" style="z-index:34"></div>
+<div class="sheet" id="ssheet" style="z-index:35" role="dialog" aria-label="Suggestion">
+  <div class="sh-head"><h3>Personnalise ta Whoop</h3><button class="x" id="sclose">✕</button></div>
+  <div style="padding:0 18px;font-size:13.5px;color:var(--mute)">Ajoute un bracelet personnalisé à <b style="color:var(--gold2)">20 €</b> au lieu de 30 €, prix réservé aux clients Whoop.</div>
+  <div class="lines" id="slines"></div>
+  <div class="foot" style="border:0"><div class="order"><a class="ow" href="#" id="sdone" style="background:var(--txt);color:#fff">Continuer</a></div></div>
+</div>
+<div class="sheet-bg" id="ibg" style="z-index:32"></div>
+<div class="sheet" id="info" style="z-index:33" role="dialog" aria-label="Whoop 5.0">
+  <div class="sh-head"><h3>Whoop 5.0 + abonnement à vie</h3><button class="x" id="iclose">✕</button></div>
+  <div style="padding:4px 18px 0;font-size:14.5px;line-height:1.5;color:var(--txt)">
+    <p>Le bracelet <b>Whoop 5.0</b> avec l'abonnement <b>inclus à vie</b> (équivalent de la formule LIFE).</p>
+    <div style="margin:14px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;padding:12px 14px;color:var(--mute)"><span>Chez Whoop</span><b style="text-decoration:line-through">264 € / an</b></div>
+      <div style="display:flex;justify-content:space-between;padding:12px 14px;background:var(--card2)"><span>Chez Mr. Chrono</span><b style="color:var(--gold)">130 €, une seule fois</b></div>
+    </div>
+    <p style="color:var(--mute);font-size:13.5px">Pas d'abonnement à payer ensuite. Réserve le tien : envoie ta commande sur WhatsApp ou Snap, on te confirme la dispo et on fixe la remise en main propre sur Bruxelles.</p>
+  </div>
+  <div class="foot" style="border:0"><div class="order"><a class="ow" href="#" id="iok" style="background:var(--txt);color:#000">Réserver · ajouter au panier</a></div></div>
+</div>
+
+<script>
+const DATA = {"synced": "13/11/2026", "products": [{"id": "gs-r05", "cat": "g-shock", "nom": "GA-2100 · Noir intégral", "prix": 50, "dispo": 2, "img": "r05", "fam": "GA", "ventes": 3}, {"id": "gs-r06", "cat": "g-shock", "nom": "GA-2100 · Kaki", "prix": 50, "dispo": 2, "img": "r06", "fam": "GA", "ventes": 0}, {"id": "gs-r07", "cat": "g-shock", "nom": "GA-B2100 · Noir/Jaune", "prix": 50, "dispo": 1, "img": "r07", "fam": "GA", "ventes": 1}, {"id": "gs-r08", "cat": "g-shock", "nom": "GA-B2100 · Vert", "prix": 50, "dispo": 2, "img": "r08", "fam": "GA", "ventes": 0}, {"id": "gs-r09", "cat": "g-shock", "nom": "GA-2100 · Noir/Blanc", "prix": 50, "dispo": 2, "img": "r09", "fam": "GA", "ventes": 0}, {"id": "gs-r10", "cat": "g-shock", "nom": "GA-2100 · Gris", "prix": 50, "dispo": 2, "img": "r10", "fam": "GA", "ventes": 1}, {"id": "gs-r12", "cat": "g-shock", "nom": "GA-2100 · Blanc", "prix": 50, "dispo": 1, "img": "r12", "fam": "GA", "ventes": 1}, {"id": "gs-r13", "cat": "g-shock", "nom": "GA-2100 · Transparent", "prix": 50, "dispo": 2, "img": "r13", "fam": "GA", "ventes": 1}, {"id": "gs-r29", "cat": "g-shock", "nom": "AP · Rouge", "prix": 70, "dispo": 1, "img": "r29", "fam": "AP", "ventes": 1}, {"id": "gs-r31", "cat": "g-shock", "nom": "AP · Acier, bracelet orange", "prix": 70, "dispo": 2, "img": "r31", "fam": "AP", "ventes": 0}, {"id": "gs-r32", "cat": "g-shock", "nom": "AP · Noir/Jaune", "prix": 70, "dispo": 1, "img": "r32", "fam": "AP", "ventes": 1}, {"id": "gs-r30", "cat": "g-shock", "nom": "AP · Acier/Noir", "prix": 70, "dispo": 2, "img": "r30", "fam": "AP", "ventes": 0}, {"id": "gs-r15", "cat": "g-shock", "nom": "GBM-2100 · Acier/Noir", "prix": 60, "dispo": 2, "img": "r15", "fam": "GBM", "ventes": 2}, {"id": "gs-r17", "cat": "g-shock", "nom": "GBM-2100 · Acier/Vert", "prix": 60, "dispo": 2, "img": "r17", "fam": "GBM", "ventes": 0}, {"id": "gs-r18", "cat": "g-shock", "nom": "GBM-2100 · Noir", "prix": 60, "dispo": 2, "img": "r18", "fam": "GBM", "ventes": 0}, {"id": "gs-r19", "cat": "g-shock", "nom": "GBM-2100 · Bleu marine", "prix": 60, "dispo": 1, "img": "r19", "fam": "GBM", "ventes": 1}, {"id": "gs-r20", "cat": "g-shock", "nom": "GBM-2100 · Gris anthracite", "prix": 60, "dispo": 2, "img": "r20", "fam": "GBM", "ventes": 1}, {"id": "gs-r21", "cat": "g-shock", "nom": "GBM-2100 · Acier/Bleu", "prix": 60, "dispo": 1, "img": "r21", "fam": "GBM", "ventes": 1}, {"id": "gs-r33", "cat": "g-shock", "nom": "GM-2100 Utility Metal · Vert", "prix": 60, "dispo": 2, "img": "r33", "fam": "UM", "ventes": 0}, {"id": "gs-r34", "cat": "g-shock", "nom": "GM-2100 Utility Metal · Noir/Orange", "prix": 60, "dispo": 1, "img": "r34", "fam": "UM", "ventes": 0}, {"id": "gs-r35", "cat": "g-shock", "nom": "GM-2100 Utility Metal · Acier/Kaki", "prix": 60, "dispo": 2, "img": "r35", "fam": "UM", "ventes": 0}, {"id": "gs-r36", "cat": "g-shock", "nom": "GM-S2100 · Vert", "prix": 60, "dispo": 2, "img": "r36", "fam": "GMS", "ventes": 0}, {"id": "gs-r37", "cat": "g-shock", "nom": "GM-S2100 · Bleu", "prix": 60, "dispo": 2, "img": "r37", "fam": "GMS", "ventes": 0}, {"id": "gs-r38", "cat": "g-shock", "nom": "GM-S2100 · Noir", "prix": 60, "dispo": 2, "img": "r38", "fam": "GMS", "ventes": 0}, {"id": "gs-r39", "cat": "g-shock", "nom": "GM-S2100 · Acier/Blanc", "prix": 60, "dispo": 2, "img": "r39", "fam": "GMS", "ventes": 0}, {"id": "gs-r40", "cat": "g-shock", "nom": "GBD-200 · Noir", "prix": 60, "dispo": 1, "img": "r40", "fam": "GBD", "ventes": 0}, {"id": "gs-r41", "cat": "g-shock", "nom": "GBD-200 · Noir/Gris", "prix": 60, "dispo": 2, "img": "r41", "fam": "GBD", "ventes": 0}, {"id": "gs-r42", "cat": "g-shock", "nom": "GBD-200 · Noir/Blanc", "prix": 60, "dispo": 2, "img": "r42", "fam": "GBD", "ventes": 0}, {"id": "gs-r22", "cat": "g-shock", "nom": "AP · Acier, bracelet blanc", "prix": 70, "dispo": 2, "img": "r22", "fam": "AP", "ventes": 1}, {"id": "gs-r23", "cat": "g-shock", "nom": "AP · Noir/Orange, bracelet bleu", "prix": 70, "dispo": 1, "img": "r23", "fam": "AP", "ventes": 1}, {"id": "gs-r24", "cat": "g-shock", "nom": "AP · Crème", "prix": 70, "dispo": 2, "img": "r24", "fam": "AP", "ventes": 0}, {"id": "gs-r25", "cat": "g-shock", "nom": "AP · Noir intégral", "prix": 70, "dispo": 2, "img": "r25", "fam": "AP", "ventes": 5}, {"id": "gs-r27", "cat": "g-shock", "nom": "AP · Bleu glacier", "prix": 70, "dispo": 2, "img": "r27", "fam": "AP", "ventes": 2}, {"id": "gs-r28", "cat": "g-shock", "nom": "AP · Camo", "prix": 70, "dispo": 2, "img": "r28", "fam": "AP", "ventes": 0}, {"id": "gs-r44", "cat": "g-shock", "nom": "Full Metal · Noir", "prix": 100, "dispo": 2, "color": "#2a2a2e", "metal": true, "fam": "FM", "ventes": 1}, {"id": "gs-r43", "cat": "g-shock", "nom": "Full Metal · Acier", "prix": 100, "dispo": 0, "fam": "FM", "img": "r43", "ventes": 3}, {"id": "gs-r11", "cat": "g-shock", "nom": "GA-2100 · Noir (n°36)", "prix": 50, "dispo": 0, "color": "#2a2a30", "fam": "GA", "ventes": 1}, {"id": "gs-r14", "cat": "g-shock", "nom": "GA-2100 · Rose", "prix": 50, "dispo": 0, "color": "#f4a6c4", "fam": "GA", "ventes": 2}, {"id": "rp-bleu", "cat": "royal-pop", "nom": "Royal Pop Lan Ba", "prix": 160, "dispo": 2, "img": "rpt", "ventes": 8}, {"id": "rp-noir", "cat": "royal-pop", "nom": "Royal Pop Ocho Negro", "prix": 160, "dispo": 2, "img": "rpw", "ventes": 8}, {"id": "wh-1", "cat": "whoop", "nom": "Whoop 5.0 + abonnement à vie", "prix": 130, "dispo": 2, "img": "wh1", "was": "264 €/an chez Whoop", "info": "whoop", "ventes": 20}, {"id": "bw-1", "cat": "bracelets", "nom": "Bracelet Whoop · Rolex noir", "prix": 20, "dispo": 2, "ventes": 1, "band": "whoop", "img": "bw-rolex-noir"}, {"id": "bw-rolex-bleu", "cat": "bracelets", "nom": "Bracelet Whoop · Rolex bleu", "prix": 20, "dispo": 2, "ventes": 0, "band": "whoop", "img": "bw-rolex-bleu"}, {"id": "bw-rolex-blanc", "cat": "bracelets", "nom": "Bracelet Whoop · Rolex blanc", "prix": 20, "dispo": 2, "ventes": 1, "band": "whoop", "img": "bw-rolex-blanc"}, {"id": "bw-nrns-blanc", "cat": "bracelets", "nom": "Bracelet Whoop · No Risk No Story", "prix": 20, "dispo": 2, "ventes": 0, "band": "whoop", "img": "bw-nrns-blanc"}, {"id": "bw-nmfp-noir", "cat": "bracelets", "nom": "Bracelet Whoop · Need Money for Porsche noir", "prix": 20, "dispo": 2, "ventes": 0, "band": "whoop", "color": "#18181a"}, {"id": "bw-nmfp-gris", "cat": "bracelets", "nom": "Bracelet Whoop · Need Money for Porsche gris", "prix": 20, "dispo": 2, "ventes": 0, "band": "whoop", "color": "#8a8a90"}, {"id": "bw-noir", "cat": "bracelets", "nom": "Bracelet Whoop · Noir", "prix": 20, "dispo": 0, "ventes": 1, "band": "whoop", "color": "#18181a"}, {"id": "bw-gris", "cat": "bracelets", "nom": "Bracelet Whoop · Gris", "prix": 20, "dispo": 0, "ventes": 1, "band": "whoop", "color": "#8a8a90"}, {"id": "brp-1", "cat": "bracelets", "nom": "Bracelet Royal Pop", "prix": 0, "dispo": 0, "color": "#18181a", "ventes": 0}, {"id": "grp-1", "cat": "bracelets", "nom": "Gousset Royal Pop", "prix": 0, "dispo": 0, "color": "#e8c46a", "ventes": 0}]};
+const WHATSAPP = "32451018695";
+const CATS = [{id:"g-shock",label:"G-Shock"},{id:"royal-pop",label:"Royal Pop"},{id:"whoop",label:"Whoop"},{id:"bracelets",label:"Bracelets"}];
+const P = Object.fromEntries(DATA.products.map(p=>[p.id,p]));
+document.getElementById("sync").textContent = DATA.synced;
+
+/* ---------- panier ---------- */
+let cart = {};
+try{ cart = JSON.parse(localStorage.getItem("mrchrono-cart")||"{}") }catch(e){ cart = {} }
+for(const id in cart){ if(!P[id]||P[id].dispo<=0) delete cart[id]; else cart[id]=Math.min(cart[id],P[id].dispo) }
+function save(){ try{ localStorage.setItem("mrchrono-cart",JSON.stringify(cart)) }catch(e){} }
+const MAXQ=2;
+function setQty(id,q){ const lim=Math.min(MAXQ,P[id].dispo), want=q; q=Math.max(0,Math.min(q,lim)); if(q) cart[id]=q; else delete cart[id]; save(); renderAll(); if(want>lim&&lim>0) askMore(id) }
+function askMore(id){ const el=document.getElementById("toast"); el.innerHTML=`Maximum ${MAXQ} par modèle. Tu en veux plus ? <a href="${wa(`Salut Mr. Chrono ! J'aimerais plus de ${MAXQ} « ${P[id].nom} », tu en as en stock ?`)}" style="text-decoration:underline;font-weight:800">Demande-nous sur WhatsApp</a>`; el.style.pointerEvents="auto"; el.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>{el.classList.remove("on");el.style.pointerEvents=""},5000) }
+const count=()=>Object.values(cart).reduce((a,b)=>a+b,0);
+const total=()=>Object.entries(cart).reduce((s,[id,q])=>s+priceOf(P[id])*q,0);
+const unknown=()=>Object.keys(cart).some(id=>!priceOf(P[id]));
+
+let ocode="MC-"+Math.random().toString(36).slice(2,6).toUpperCase();
+function orderText(){
+  const who=document.getElementById("who").value.trim(), tel=document.getElementById("tel").value.trim();
+  const lines=Object.entries(cart).map(([id,q])=>`• ${q} × ${P[id].nom}${priceOf(P[id])?` (${priceOf(P[id])} €)`:''}`);
+  const bandInfo=Object.keys(cart).some(id=>isBand(P[id]))?`\nClient Whoop Mr. Chrono : ${hasWhoop()?'Whoop dans cette commande':(client==='oui'?'oui':'non')}`:'';
+  const code=Object.entries(cart).map(([id,q])=>`${id}*${q}`).join(";");
+  return `Salut Mr. Chrono ! Je voudrais commander :\n${lines.join("\n")}\nTotal estimé : ≈ ${total()} €${unknown()?' + prix à confirmer':''}${bandInfo}${who?`\nDe la part de : ${who}`:''}${tel?`\nWhatsApp : ${tel}`:''}\nCode : ${ocode} | ${code}`;
+}
+const wa=t=>`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+
+
+/* ---------- bracelets Whoop : 20 € clients Whoop, 30 € sinon ---------- */
+let client=null;try{client=localStorage.getItem("mrchrono-whoop-client")}catch(e){}
+const isBand=p=>p&&p.band==="whoop";
+const hasWhoop=()=>(cart["wh-1"]||0)>0;
+const bandPrice=()=>(hasWhoop()||client==="oui")?20:30;
+const priceOf=p=>isBand(p)?bandPrice():(p.prix||0);
+function sheet(id,bg,on){const s=document.getElementById(id),b=document.getElementById(bg);s.style.transform=on?"none":"";b.style.opacity=on?1:"";b.style.pointerEvents=on?"auto":""}
+let pendingBand=null;
+function askClient(id){pendingBand=id;sheet("qsheet","qbg",true)}
+function addBand(id){ if(!hasWhoop()&&!client){askClient(id);return} setQty(id,(cart[id]||0)+1); toast(`Bracelet ajouté · ${bandPrice()} € ✅`) }
+function suggest(){
+  const bands=DATA.products.filter(p=>isBand(p)&&p.dispo>0).sort(bySales);
+  if(!bands.length)return;
+  document.getElementById("slines").innerHTML=`<div class="sgrid">${bands.map(p=>`<div class="sc ${cart[p.id]?'in':''}"><div class="im" data-zoom="${p.id}">${visual(p)}<span class="zi">⤢</span></div><div class="nm">${p.nom.replace("Bracelet Whoop · ","")}</div><div class="pr">20 €</div><div class="ac">${cart[p.id]?`<div class="mini"><button data-sdec="${p.id}">−</button><span>${cart[p.id]}</span><button data-sinc="${p.id}">+</button></div>`:`<button data-sinc="${p.id}">Ajouter</button>`}</div></div>`).join("")}</div>`;
+  sheet("ssheet","sbg",true);
+}
+/* ---------- dessins pour les modèles sans photo ---------- */
+function oct(cx,cy,r){return [...Array(8)].map((_,i)=>{const t=(i*45+22.5)*Math.PI/180;return `${cx+r*Math.cos(t)},${cy+r*Math.sin(t)}`}).join(" ")}
+function shade(hex,p){const n=parseInt(hex.slice(1),16);const f=v=>Math.max(0,Math.min(255,Math.round(v+(p/100)*255)));return "#"+[n>>16,n>>8&255,n&255].map(v=>f(v).toString(16).padStart(2,"0")).join("")}
+function svgFor(p){
+  const c=p.color||"#24242a",a=shade(c,25);
+  if(p.cat==="royal-pop"){
+    const screws=[...Array(8)].map((_,i)=>{const t=(i*45+22.5)*Math.PI/180;return `<circle cx="${100+58*Math.cos(t)}" cy="${100+58*Math.sin(t)}" r="4.5" fill="${a}"/>`}).join("");
+    let g="";for(let x=-36;x<=36;x+=10)for(let y=-36;y<=36;y+=10)if(x*x+y*y<1200)g+=`<rect x="${100+x-3}" y="${100+y-3}" width="6" height="6" fill="${shade(c,-10)}" opacity=".6"/>`;
+    return `<svg viewBox="0 0 200 200"><rect x="88" y="8" width="24" height="22" rx="6" fill="${a}"/><path d="M100 18 C60 -10 30 20 40 60" stroke="${a}" stroke-width="6" fill="none" stroke-linecap="round"/><polygon points="${oct(100,100,80)}" fill="${c}" stroke="rgba(255,255,255,.12)" stroke-width="2"/><polygon points="${oct(100,100,66)}" fill="${shade(c,-8)}"/>${screws}<circle cx="100" cy="100" r="44" fill="${shade(c,8)}"/>${g}<line x1="100" y1="100" x2="100" y2="68" stroke="#fff" stroke-width="5" stroke-linecap="round"/><line x1="100" y1="100" x2="124" y2="100" stroke="#fff" stroke-width="5" stroke-linecap="round"/><circle cx="100" cy="100" r="5" fill="#fff"/></svg>`;
+  }
+  if(p.cat==="whoop"||p.band==="whoop"){
+    return `<svg viewBox="0 0 200 200"><rect x="70" y="10" width="60" height="180" rx="26" fill="${c}" stroke="#34343a" stroke-width="2"/>${p.band?'':`<rect x="62" y="70" width="76" height="60" rx="14" fill="#0c0c0d" stroke="#3a3a3f" stroke-width="2"/><text x="100" y="106" text-anchor="middle" font-family="Inter" font-weight="700" font-size="14" fill="#e8e8ea" letter-spacing="3">WHOOP</text>`}</svg>`;
+  }
+  if(p.cat==="bracelets"){
+    return `<svg viewBox="0 0 200 200"><rect x="74" y="4" width="52" height="80" rx="18" fill="${c}" stroke="#34343a" stroke-width="2"/><rect x="74" y="116" width="52" height="80" rx="18" fill="${c}" stroke="#34343a" stroke-width="2"/>${[130,146,162,178].map(y=>`<circle cx="100" cy="${y}" r="3.5" fill="#000" opacity=".5"/>`).join("")}<polygon points="${oct(100,100,40)}" fill="none" stroke="#e8c46a" stroke-width="5" stroke-dasharray="6 5"/></svg>`;
+  }
+  const dial=p.metal?shade(c,-40):"#0e0e10";
+  return `<svg viewBox="0 0 200 200"><rect x="66" y="0" width="68" height="44" rx="10" fill="${p.metal?'#1d1d20':c}"/><rect x="66" y="156" width="68" height="44" rx="10" fill="${p.metal?'#1d1d20':c}"/><rect x="28" y="30" width="144" height="140" rx="34" fill="${c}" stroke="rgba(0,0,0,.35)" stroke-width="2"/>${[70,114].map(y=>`<rect x="170" y="${y}" width="10" height="16" rx="3" fill="${a}"/><rect x="20" y="${y}" width="10" height="16" rx="3" fill="${a}"/>`).join("")}<polygon points="${oct(100,100,58)}" fill="${shade(c,-8)}" stroke="${a}" stroke-width="2"/><circle cx="100" cy="100" r="44" fill="${dial}"/><rect x="80" y="112" width="40" height="13" rx="2" fill="#9fae96" opacity=".85"/>${[...Array(12)].map((_,i)=>{const t=i*30*Math.PI/180;return `<line x1="${100+38*Math.sin(t)}" y1="${100-38*Math.cos(t)}" x2="${100+32*Math.sin(t)}" y2="${100-32*Math.cos(t)}" stroke="${a}" stroke-width="3"/>`}).join("")}<line x1="100" y1="100" x2="100" y2="70" stroke="#fff" stroke-width="4" stroke-linecap="round"/><line x1="100" y1="100" x2="120" y2="88" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="100" cy="100" r="4" fill="#fff"/></svg>`;
+}
+const visual=p=>p.img?`<img src="img/${p.img}.jpg" alt="${p.nom}" loading="lazy">`:svgFor(p);
+
+/* ---------- rendu ---------- */
+function card(p,rank){
+  const q=cart[p.id]||0, sold=p.dispo<=0;
+  const best=(p.ventes||0)>=2?`<span class="tag bs">Best-seller</span>`:'';
+  const tag=`<div class="tags">${best}${sold?`<span class="tag out">Épuisé</span>`:`<span class="tag ok">En stock</span>`}</div>`;
+  const price=isBand(p)?`<div style="font-size:12px;color:var(--gold);font-weight:600;letter-spacing:.04em">Prix selon ton profil</div>`:p.prix?`<div class="price">${p.prix} €${p.was?` <s style="font-family:Inter;font-weight:500;font-size:12px;color:var(--mute)">${p.was}</s>`:''}</div>${p.info==='whoop'?'<div style="font-size:12px;color:var(--gold);font-weight:600">Abonnement inclus à vie</div>':''}`:`<div class="price ask">Prix en DM</div>`;
+  let act;
+  if(sold) act=`<a class="notify" href="${wa(`Salut ! Préviens-moi quand « ${p.nom} » est de retour 🙏`)}">Me prévenir</a>`;
+  else if(q) act=`<div class="stepper"><button data-dec="${p.id}">−</button><span>${q} au panier</span><button data-inc="${p.id}">+</button></div>`;
+  else act=p.info==='whoop'?`<button data-info="${p.id}">Réserver la mienne</button>`:isBand(p)?`<button data-band="${p.id}">Ajouter bracelet personnalisé</button>`:`<button data-inc="${p.id}">Ajouter au panier</button>`;
+  return `<div class="card ${sold?'sold':''}"><div class="vis ${p.img?'ph':''}" style="--glow:${(p.color||'#2a2a31')}40">${tag}${rank?`<span class="rank">${rank}</span>`:''}${visual(p)}</div><div class="info"><div class="name">${p.nom}</div>${price}<div class="add">${act}</div></div></div>`;
+}
+const FAMS=[{id:"all",label:"Tout"},{id:"GA",label:"GA"},{id:"GBM",label:"GBM"},{id:"GMS",label:"GMS"},{id:"GBD",label:"GBD"},{id:"AP",label:"AP"},{id:"UM",label:"Utility Metal"},{id:"FM",label:"Full Metal"}];
+let fam="all";
+const bySales=(a,b)=>((b.dispo>0)-(a.dispo>0))||((b.ventes||0)-(a.ventes||0));
+function renderList(){
+  const cur=(location.hash||"").slice(1), valid=CATS.some(c=>c.id===cur)?cur:"tout";
+  document.getElementById("tabs").innerHTML=[{id:"tout",label:"Tout"},...CATS].map(c=>`<a href="#${c.id}" class="${c.id===valid?'on':''}">${c.label}</a>`).join("");
+  const cats=valid==="tout"?CATS:CATS.filter(c=>c.id===valid);
+  document.getElementById("list").innerHTML=cats.map(c=>{
+    let items=DATA.products.filter(p=>p.cat===c.id);
+    let sub="";
+    if(c.id==="g-shock"){
+      const fams=FAMS.filter(f=>f.id==="all"||items.some(p=>p.fam===f.id));
+      sub=`<div class="sub">${fams.map(f=>`<button data-fam="${f.id}" class="${f.id===fam?'on':''}">${f.label}</button>`).join("")}</div>`;
+      if(fam!=="all") items=items.filter(p=>p.fam===fam);
+    }
+    items=items.sort(bySales);
+    const n=items.filter(p=>p.dispo>0).length;
+    return `<section><div class="sh" data-eyebrow="Collection"><h2>${c.label}</h2><small>${n} modèles disponibles</small></div>${sub}<div class="grid">${items.map(p=>card(p)).join("")}</div></section>`;
+  }).join("");
+}
+function renderHighlights(){
+  const cur=(location.hash||"").slice(1), show=!CATS.some(c=>c.id===cur);
+  const el=document.getElementById("highlights");
+  document.querySelector(".welcome").style.display=show?"":"none";
+  if(!show){el.innerHTML="";return}
+  const top=[...DATA.products].filter(p=>p.cat!=="bracelets").sort((a,b)=>(b.ventes||0)-(a.ventes||0)).slice(0,5);
+  const per=CATS.filter(c=>c.id!=="bracelets").map(c=>[c,DATA.products.filter(p=>p.cat===c.id).sort(bySales)[0]]).filter(x=>x[1]);
+  el.innerHTML=`<section id="top"><div class="sh" data-eyebrow="Les plus demandées"><h2>Top 5 du moment</h2><small>Toutes catégories</small></div><div class="top5">${top.map((p,i)=>card(p,i+1)).join("")}</div></section>
+  <section><div class="sh" data-eyebrow="Sélection"><h2>Best-seller par catégorie</h2></div><div class="catbest">${per.map(([c,p])=>`<a class="cb" href="#${c.id}"><div class="im">${visual(p)}</div><div class="lb"><small>${c.label}</small><div>${p.nom}</div><b>${p.prix?p.prix+' €':'Prix en DM'}</b></div></a>`).join("")}</div></section>`;
+}
+function renderCart(){
+  const n=count(), btn=document.getElementById("cartBtn");
+  document.getElementById("cartN").textContent=n; btn.classList.toggle("has",n>0);
+  const ids=Object.keys(cart);
+  document.getElementById("lines").innerHTML=ids.length?ids.map(id=>{const p=P[id];return `<div class="ln"><div class="th">${visual(p)}</div><div class="t"><div>${p.nom}</div><div>${priceOf(p)?priceOf(p)+' € / pièce':'Prix en DM'}</div></div><div class="mini"><button data-dec="${id}">−</button><span>${cart[id]}</span><button data-inc="${id}">+</button></div></div>`}).join(""):`<div class="empty">Ton panier est vide.<br>Ajoute un modèle depuis le catalogue.</div>`;
+  document.getElementById("tot").textContent=`≈ ${total()} €${unknown()?' +':''}`;
+  document.getElementById("order").classList.toggle("off",!n);
+  document.getElementById("sendWa").href=n?wa(orderText()):"#";
+}
+function renderAll(){renderHighlights();renderList();renderCart()}
+
+/* ---------- fiche info (Whoop) ---------- */
+let infoId=null;const infoEl=document.getElementById("info"),ibg=document.getElementById("ibg");
+function openInfo(id){infoId=id;infoEl.style.transform="none";ibg.style.opacity=1;ibg.style.pointerEvents="auto"}
+function closeInfo(){infoEl.style.transform="";ibg.style.opacity="";ibg.style.pointerEvents=""}
+document.getElementById("iclose").onclick=ibg.onclick=closeInfo;
+document.getElementById("qclose").onclick=document.getElementById("qbg").onclick=()=>{pendingBand=null;sheet("qsheet","qbg",false)};
+document.getElementById("sclose").onclick=document.getElementById("sbg").onclick=()=>{sheet("ssheet","sbg",false);toast("Whoop ajoutée au panier ✅")};
+document.getElementById("sdone").onclick=e=>{e.preventDefault();sheet("ssheet","sbg",false);toast("Ajouté au panier ✅ Envoie ta réservation depuis le panier")};
+document.getElementById("iok").onclick=e=>{e.preventDefault();if(infoId)setQty(infoId,(cart[infoId]||0)+1);closeInfo();setTimeout(suggest,250)};
+/* ---------- interactions ---------- */
+document.addEventListener("click",e=>{
+  if(e.target.closest("#zoom")){document.getElementById("zoom").classList.remove("on");return}
+  const zm=e.target.closest("[data-zoom]");if(zm){const p=P[zm.dataset.zoom];document.getElementById("zimg").innerHTML=visual(p);document.getElementById("zname").textContent=p.nom;document.getElementById("zoom").classList.add("on");return}
+  const fb=e.target.closest("[data-fam]");
+  if(fb){fam=fb.dataset.fam;renderList();return}
+  const inf=e.target.closest("[data-info]");if(inf){openInfo(inf.dataset.info);return}
+  const bd=e.target.closest("[data-band]");if(bd){addBand(bd.dataset.band);return}
+  const cl=e.target.closest("[data-client]");if(cl){e.preventDefault();client=cl.dataset.client;try{localStorage.setItem("mrchrono-whoop-client",client)}catch(_){}sheet("qsheet","qbg",false);if(pendingBand){const id=pendingBand;pendingBand=null;addBand(id)}return}
+  const si=e.target.closest("[data-sinc]"),sd=e.target.closest("[data-sdec]");
+  if(si||sd){const id=(si||sd).dataset[si?"sinc":"sdec"];setQty(id,(cart[id]||0)+(si?1:-1));suggest();return}
+  const inc=e.target.closest("[data-inc]"),dec=e.target.closest("[data-dec]");
+  if(inc){setQty(inc.dataset.inc,(cart[inc.dataset.inc]||0)+1)}
+  if(dec){setQty(dec.dataset.dec,(cart[dec.dataset.dec]||0)-1)}
+});
+const wrap=document.getElementById("cartWrap");
+document.getElementById("cartBtn").onclick=()=>wrap.classList.add("open");
+document.getElementById("close").onclick=document.getElementById("bg").onclick=()=>wrap.classList.remove("open");
+document.getElementById("who").oninput=document.getElementById("tel").oninput=()=>{document.getElementById("sendWa").href=count()?wa(orderText()):"#"};
+document.getElementById("sendSnap").addEventListener("click",()=>{
+  const t=orderText();
+  try{navigator.clipboard.writeText(t).then(()=>toast("Commande copiée ✅ Colle-la dans le chat Snap"),()=>toast("Envoie ta liste sur Snap : mister-gshock"))}catch(e){toast("Envoie ta liste sur Snap : mister-gshock")}
+});
+document.getElementById("waMain").href=wa("Salut Mr. Chrono ! J'ai une question sur le catalogue 👀");
+let tt;function toast(m){const el=document.getElementById("toast");el.textContent=m;el.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>el.classList.remove("on"),2600)}
+window.addEventListener("hashchange",()=>{if(location.hash==="#top"){document.getElementById("top")?.scrollIntoView({behavior:"smooth"});return}renderHighlights();renderList();window.scrollTo({top:0,behavior:"smooth"})});
+renderAll();
+</script>
+</body>
+</html>
