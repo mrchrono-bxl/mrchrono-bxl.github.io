@@ -272,7 +272,9 @@ try{ cart = JSON.parse(localStorage.getItem("mrchrono-cart")||"{}") }catch(e){ c
 for(const id in cart){ if(!P[id]||P[id].dispo<=0) delete cart[id]; else cart[id]=Math.min(cart[id],P[id].dispo) }
 function save(){ try{ localStorage.setItem("mrchrono-cart",JSON.stringify(cart)) }catch(e){} }
 const MAXQ=2;
-function setQty(id,q){ const lim=Math.min(MAXQ,P[id].dispo), want=q; q=Math.max(0,Math.min(q,lim)); if(q) cart[id]=q; else delete cart[id]; save(); renderAll(); if(want>lim&&lim>0) askMore(id) }
+/* ---------- stats (GoatCounter) ---------- */
+function track(path,title){ try{ if(window.goatcounter&&window.goatcounter.count) window.goatcounter.count({path:path,title:title||path,event:true}) }catch(e){} }
+function setQty(id,q){ const prev=cart[id]||0; if(q>prev&&prev<Math.min(MAXQ,P[id].dispo)){ track("panier-ajout","Ajout au panier"); track("panier/"+id,"Panier · "+P[id].nom) } const lim=Math.min(MAXQ,P[id].dispo), want=q; q=Math.max(0,Math.min(q,lim)); if(q) cart[id]=q; else delete cart[id]; save(); renderAll(); if(want>lim&&lim>0) askMore(id) }
 function askMore(id){ const el=document.getElementById("toast"); el.innerHTML=`Maximum ${MAXQ} par modèle. Tu en veux plus ? <a href="${wa(`Salut Mr. Chrono ! J'aimerais plus de ${MAXQ} « ${P[id].nom} », tu en as en stock ?`)}" style="text-decoration:underline;font-weight:800">Demande-nous sur WhatsApp</a>`; el.style.pointerEvents="auto"; el.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>{el.classList.remove("on");el.style.pointerEvents=""},5000) }
 const count=()=>Object.values(cart).reduce((a,b)=>a+b,0);
 const total=()=>Object.entries(cart).reduce((s,[id,q])=>s+priceOf(P[id])*q,0);
@@ -407,14 +409,18 @@ const wrap=document.getElementById("cartWrap");
 document.getElementById("cartBtn").onclick=()=>wrap.classList.add("open");
 document.getElementById("close").onclick=document.getElementById("bg").onclick=()=>wrap.classList.remove("open");
 document.getElementById("who").oninput=document.getElementById("tel").oninput=()=>{document.getElementById("sendWa").href=count()?wa(orderText()):"#"};
+document.getElementById("sendWa").addEventListener("click",()=>{ if(count()) track("commande-whatsapp","Commande envoyée sur WhatsApp") });
 document.getElementById("sendSnap").addEventListener("click",()=>{
+  if(count()) track("commande-snapchat","Commande envoyée sur Snapchat");
   const t=orderText();
   try{navigator.clipboard.writeText(t).then(()=>toast("Commande copiée ✅ Colle-la dans le chat Snap"),()=>toast("Envoie ta liste sur Snap : mister-gshock"))}catch(e){toast("Envoie ta liste sur Snap : mister-gshock")}
 });
+document.getElementById("waMain").addEventListener("click",()=>track("question-whatsapp","Question sur WhatsApp"));
 document.getElementById("waMain").href=wa("Salut Mr. Chrono ! J'ai une question sur le catalogue 👀");
 let tt;function toast(m){const el=document.getElementById("toast");el.textContent=m;el.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>el.classList.remove("on"),2600)}
 window.addEventListener("hashchange",()=>{if(location.hash==="#top"){document.getElementById("top")?.scrollIntoView({behavior:"smooth"});return}renderHighlights();renderList();window.scrollTo({top:0,behavior:"smooth"})});
 renderAll();
 </script>
+<script data-goatcounter="https://mrchrono.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
